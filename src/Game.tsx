@@ -12,9 +12,7 @@ function Game() {
       <div>
         <div className="grid grid-cols-3 gap-3 mx-auto w-96">
           {gameState.map((player, index) => (
-            <Square key={index}>
-              {player}
-            </Square>
+            <Square key={index} {...{player}} />
           ))}
         </div>
         <div>Scores Go Here</div>
