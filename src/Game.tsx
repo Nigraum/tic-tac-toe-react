@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Square from "./square";
+
 const INITIAL_GAME_STATE = ["", "", "", "", "", "", "", "", "", ];
 
 function Game() {
