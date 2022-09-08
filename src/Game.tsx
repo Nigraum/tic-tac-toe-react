@@ -10,13 +10,12 @@ function Game() {
   const handleCellClick = (event: any) => {
     const cellIndex = Number(event.target.getAttribute("data-cell-index"));
     const currentValue = gameState[cellIndex];
-    console.log(
-      "file:game.tsx handlecellclick currentValue",
-      currentValue
-    );
+    
   };
 
   const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
+  const [currentPlayer, setCurrentPlayer] = useState("X");
+
   return (
     <div className="h-full p-8 text-slate-800 bg-gradient-to-r from-cyan-500 to-blue-500">
       <h1 className="text-center text-5xl mb-4 font-display text-white">Tic Tac Toe Game</h1>
