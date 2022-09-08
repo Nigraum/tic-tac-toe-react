@@ -14,8 +14,9 @@ function Game() {
       return
     }
 
-    const newValues = [...gameState]
-    newValues[cellIndex] = currentPlayer
+    const newValues = [...gameState];
+    newValues[cellIndex] = currentPlayer;
+    setGameState(newValues);
   };
 
   const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
