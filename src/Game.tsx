@@ -4,11 +4,14 @@ import Square from "./square";
 
 const INITIAL_GAME_STATE = ["", "", "", "", "", "", "", "", "", ];
 
-const handleCellClick = (event: any) => {
-  const cellIndex = Number(event.target.getAttribute("data-cell-index"))
-}
+
 
 function Game() {
+  const handleCellClick = (event: any) => {
+    const cellIndex = Number(event.target.getAttribute("data-cell-index"));
+    const currentValue = gameState[cellIndex];
+  }
+
   const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
   return (
     <div className="h-full p-8 text-slate-800 bg-gradient-to-r from-cyan-500 to-blue-500">
