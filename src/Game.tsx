@@ -50,7 +50,10 @@ function Game() {
 
     if (!gameState.includes("")) {
       window.alert("The game ended in a draw")
+      return
     }
+
+    changePlayer()
   };
 
   const changePlayer = () => {
