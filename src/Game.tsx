@@ -18,7 +18,7 @@ function Game() {
           {gameState.map((player, index) => (
             <Square 
             key={index} 
-            onclick={handleCellClick} {...{index, player}}
+            onClick={handleCellClick} {...{index, player}}
             />
           ))}
         </div>
