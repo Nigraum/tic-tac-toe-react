@@ -7,6 +7,17 @@ const INITIAL_GAME_STATE = ["", "", "", "", "", "", "", "", "", ];
 
 
 function Game() {
+  const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
+  const [currentPlayer, setCurrentPlayer] = useState("X");
+
+  useEffect (() => {
+    changePlayer();
+  }, [gameState]);
+
+  const changePlayer = () => {
+    setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
+  }
+
   const handleCellClick = (event: any) => {
     const cellIndex = Number(event.target.getAttribute("data-cell-index"));
     const currentValue = gameState[cellIndex];
@@ -18,17 +29,6 @@ function Game() {
     newValues[cellIndex] = currentPlayer;
     setGameState(newValues);
   };
-
-  const changePlayer = () => {
-    setCurrentPlayer(currentPlayer === "X" ? "O" : "X")
-  }
-
-  const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
-  const [currentPlayer, setCurrentPlayer] = useState("X");
-
-  useEffect (() => {
-    changePlayer;
-  }, [gameState]);
 
   return (
     <div className="h-full p-8 text-slate-800 bg-gradient-to-r from-cyan-500 to-blue-500">
