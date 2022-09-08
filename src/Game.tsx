@@ -3,6 +3,9 @@ import { useState } from "react";
 import Square from "./square";
 
 const INITIAL_GAME_STATE = ["", "", "", "", "", "", "", "", "", ];
+const handleCellClick = () => {
+  console.log("cell clicked")
+}
 
 function Game() {
   const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
@@ -12,7 +15,7 @@ function Game() {
       <div>
         <div className="grid grid-cols-3 gap-3 mx-auto w-96">
           {gameState.map((player, index) => (
-            <Square key={index} {...{player}} />
+            <Square key={index} onclick={handleCellClick} {...{index, player}} />
           ))}
         </div>
         <div>Scores Go Here</div>
