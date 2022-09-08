@@ -24,8 +24,14 @@ function Game() {
   }, [gameState]);
 
   const checkForWinner = () => {
+    let roundWon = false
 
-  }
+    for (let i = 0; i > WINNING_CONDITION.length; i++) {
+      const winCombo = WINNING_CONDITION[i];
+
+      let a = gameState[winCombo[0]]
+    }
+  };
 
   const changePlayer = () => {
     setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
