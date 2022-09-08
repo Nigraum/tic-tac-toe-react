@@ -30,6 +30,8 @@ function Game() {
       const winCombo = WINNING_CONDITION[i];
 
       let a = gameState[winCombo[0]]
+      let b = gameState[winCombo[1]]
+      let c = gameState[winCombo[2]]
     }
   };
 
