@@ -39,7 +39,12 @@ function Game() {
 
       if (a === b && b ===c) {
         roundWon = true
+        break;
       }
+    }
+
+    if (roundWon) {
+      window.alert(`Congrats player ${currentPlayer}`)
     }
   };
 
