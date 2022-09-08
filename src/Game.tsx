@@ -18,7 +18,6 @@ function Game() {
     setCurrentPlayer(currentPlayer === "X" ? "O" : "X");
   }
 
-  texting 
 
   const handleCellClick = (event: any) => {
     const cellIndex = Number(event.target.getAttribute("data-cell-index"));
