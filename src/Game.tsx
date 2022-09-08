@@ -19,6 +19,10 @@ function Game() {
     setGameState(newValues);
   };
 
+  const changePlayer = () => {
+    setCurrentPlayer(currentPlayer === "X" ? "O" : "X")
+  }
+
   const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
   const [currentPlayer, setCurrentPlayer] = useState("X");
 
