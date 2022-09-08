@@ -10,7 +10,11 @@ function Game() {
   const handleCellClick = (event: any) => {
     const cellIndex = Number(event.target.getAttribute("data-cell-index"));
     const currentValue = gameState[cellIndex];
-  }
+    console.log(
+      "file:game.tsx handlecellclick currentValue",
+      currentValue
+    );
+  };
 
   const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
   return (
