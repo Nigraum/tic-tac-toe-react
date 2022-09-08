@@ -10,7 +10,9 @@ function Game() {
   const handleCellClick = (event: any) => {
     const cellIndex = Number(event.target.getAttribute("data-cell-index"));
     const currentValue = gameState[cellIndex];
-    
+    if (currentValue) {
+      return
+    }
   };
 
   const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
