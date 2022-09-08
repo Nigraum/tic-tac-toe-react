@@ -36,6 +36,10 @@ function Game() {
       if ([a, b, c].includes("")) {
         continue
       }
+
+      if (a === b && b ===c) {
+        roundWon = true
+      }
     }
   };
 
