@@ -20,6 +20,7 @@ function Game() {
   const [currentPlayer, setCurrentPlayer] = useState("X");
 
   useEffect (() => {
+    changePlayer();
     checkForWinner();
   }, [gameState]);
 
@@ -50,7 +51,6 @@ function Game() {
 
     if (!gameState.includes("")) {
       window.alert("The game ended in a draw")
-      return
     }
 
     changePlayer()
