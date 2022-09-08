@@ -3,8 +3,9 @@ import { useState } from "react";
 import Square from "./square";
 
 const INITIAL_GAME_STATE = ["", "", "", "", "", "", "", "", "", ];
-const handleCellClick = () => {
-  console.log("cell clicked")
+
+const handleCellClick = (event: any) => {
+  console.log("cell clicked", event.target.getAttribute("data-cell-index"))
 }
 
 function Game() {
