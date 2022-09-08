@@ -44,7 +44,7 @@ function Game() {
     }
 
     if (roundWon) {
-      window.alert(`Congrats player ${currentPlayer}`)
+      window.alert(`Congrats player ${currentPlayer}! You are the winner!`)
     }
   };
 
