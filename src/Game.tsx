@@ -5,7 +5,7 @@ import Square from "./square";
 const INITIAL_GAME_STATE = ["", "", "", "", "", "", "", "", "", ];
 
 const handleCellClick = (event: any) => {
-  console.log("cell clicked", event.target.getAttribute("data-cell-index"))
+  const cellIndex = Number(event.target.getAttribute("data-cell-index"))
 }
 
 function Game() {
