@@ -13,6 +13,9 @@ function Game() {
     if (currentValue) {
       return
     }
+
+    const newValues = [...gameState]
+    newValues[cellIndex] = currentPlayer
   };
 
   const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
