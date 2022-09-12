@@ -27,6 +27,10 @@ function Game() {
     window.alert(`Congrats player ${currentPlayer}! You are the winner!`);
   }
 
+  const handleDraw = () => {
+    window.alert(`The game ended in a draw`);
+  }
+
   const checkForWinner = () => {
     let roundWon = false
 
