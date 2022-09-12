@@ -24,7 +24,7 @@ function Game() {
   }, [gameState]);
 
   const handleWin = () => {
-    window.alert(`Congrats player ${currentPlayer}! You are the winner!`)
+    window.alert(`Congrats player ${currentPlayer}! You are the winner!`);
   }
 
   const checkForWinner = () => {
@@ -53,7 +53,7 @@ function Game() {
     }
 
     if (!gameState.includes("")) {
-      window.alert("The game ended in a draw")
+      setTimeout(() => handleDraw(), 500)
       return;
     }
 
