@@ -23,6 +23,8 @@ function Game() {
     checkForWinner();
   }, [gameState]);
 
+  const resetBoard = () => setGameState(INITIAL_GAME_STATE)
+
   const handleWin = () => {
     window.alert(`Congrats player ${currentPlayer}! You are the winner!`);
   }
