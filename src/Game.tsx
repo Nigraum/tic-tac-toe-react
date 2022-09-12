@@ -20,7 +20,6 @@ function Game() {
   const [currentPlayer, setCurrentPlayer] = useState("X");
 
   useEffect (() => {
-    changePlayer();
     checkForWinner();
   }, [gameState]);
 
