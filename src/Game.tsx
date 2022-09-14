@@ -19,6 +19,7 @@ const WINNING_CONDITION = [
 function Game() {
   const [gameState, setGameState] = useState(INITIAL_GAME_STATE);
   const [currentPlayer, setCurrentPlayer] = useState("X");
+  const [scores, setScores] = useState(INITIAL_SCORES)
 
   useEffect (() => {
     checkForWinner();
