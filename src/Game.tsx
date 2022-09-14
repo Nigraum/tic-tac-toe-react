@@ -39,10 +39,11 @@ function Game() {
   const handleWin = () => {
     window.alert(`Congrats player ${currentPlayer}! You are the winner!`);
 
-    const newPlayerScore = scores[currentPlayer] + 1
-    const newScores = {...scores}
-    newScores[currentPlayer] = newPlayerScore
-    setScores(newScores)
+    const newPlayerScore = scores[currentPlayer] + 1;
+    const newScores = {...scores};
+    newScores[currentPlayer] = newPlayerScore;
+    setScores(newScores);
+    localStorage.setItem("scores", JSON.stringify(newScores))
 
 
     resetBoard();
