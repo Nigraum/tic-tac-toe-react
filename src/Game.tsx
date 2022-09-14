@@ -110,7 +110,10 @@ function Game() {
             />
           ))}
         </div>
-        <div>Scores Go Here</div>
+
+        <div>
+            <p>Next Player: <span>{currentPlayer}</span></p>
+        </div>
       </div>
     </div>
   );
