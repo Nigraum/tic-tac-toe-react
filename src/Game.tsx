@@ -33,6 +33,9 @@ function Game() {
   }, [])
 
   useEffect (() => {
+    if (gameState === INITIAL_GAME_STATE) {
+      return;
+    }
     checkForWinner();
   }, [gameState]);
 
