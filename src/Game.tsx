@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 
 import Square from "./square";
 
+type Scores = {
+  [key: string]: number
+}
+
 const INITIAL_GAME_STATE = ["", "", "", "", "", "", "", "", "", ];
 const INITIAL_SCORES = { X: 0, O: 0};
 
@@ -33,6 +37,7 @@ function Game() {
     const newPlayerScore = scores[currentPlayer] + 1
     newScores = {...scores}
     newScores[currentPlayer] = newPlayerScore
+    setScores(newScores)
 
 
     resetBoard();
