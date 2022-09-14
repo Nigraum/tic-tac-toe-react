@@ -7,7 +7,7 @@ type Scores = {
 }
 
 const INITIAL_GAME_STATE = ["", "", "", "", "", "", "", "", "", ];
-const INITIAL_SCORES = { X: 0, O: 0};
+const INITIAL_SCORES: Scores = { X: 0, O: 0};
 
 const WINNING_CONDITION = [
   [0, 1, 2],
@@ -35,7 +35,7 @@ function Game() {
     window.alert(`Congrats player ${currentPlayer}! You are the winner!`);
 
     const newPlayerScore = scores[currentPlayer] + 1
-    newScores = {...scores}
+    const newScores = {...scores}
     newScores[currentPlayer] = newPlayerScore
     setScores(newScores)
 
